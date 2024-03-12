@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Love Calculator</title>
+</head>
+<body>
+    <div class = "container">
+        <div class="content">
+            <img src = "./love.jpg"/>
+            <h1>Love Calculator</h1>
+            <div class = "inputarea">
+                <input type = "text" placeholder="Your Name" id = "nameone" onfocus="this.value = ' '">
+                <input type = "text" placeholder="Your Love" id = "nametwo" onfocus="this.value = ' '">
+            </div>
+            <a href = "#" onclick="love()">Calculate </a>
+            <p id = "print">Your relationship result</p>
+            <p id = "statement"></p>
+        </div>
+    </div>
+<script>
+    function love(){
+        var name1 = document.getElementById("nameone").value;
+        var name2 = document.getElementById("nametwo").value;
+
+        if(name1.length<=2){
+            alert("Enter at least 3 characters");
+        }
+        if(name2.length<=2){
+            alert("Enter at least 3 characters");
+        }
+
+        else{
+            var random = Math.floor(Math.random()*100 + 1);
+            document.getElementById("print").innerHTML = name1+" and "+name2 +" = "+random+"%"+" of love.";
+
+        }
+        if(random>=1 && random<=50){
+            document.getElementById("statement").innerHTML = "Good Relationship";
+        }
+        else if(random>=51 && random<=100){
+            document.getElementById("statement").innerHTML = "Preety Relationship";
+        }
+    }
+</script>
+</body>
+</html>
