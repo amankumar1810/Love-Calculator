@@ -46,6 +46,15 @@ body{
     padding: 20px 40px;
     font-size: 20px;
 }
+.button{
+    border-radius: 10px;
+}
+.bg-pink:hover{
+    background-color: pink;
+}
+.bg-green:hover{
+    background-color: green;
+}
 a{
     display: flex;
     justify-content: center;
